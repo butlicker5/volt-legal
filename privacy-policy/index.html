@@ -5,19 +5,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Volt — Privacy Policy</title>
 <meta name="description" content="Privacy Policy for the Volt Discord bot.">
-<meta name="theme-color" content="#08070a">
+<meta name="theme-color" content="#060504">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
 <div class="progress"></div>
 
+<div class="bg" aria-hidden="true">
+  <video id="bgVideo" class="bg-media" muted loop playsinline preload="auto"></video>
+  <div class="scene">
+    <div class="rays"></div>
+    <div class="glow"></div>
+    <svg class="waves" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <defs><linearGradient id="wgrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="rgba(231,181,74,0)"/>
+        <stop offset=".5" stop-color="rgba(245,210,128,.5)"/>
+        <stop offset="1" stop-color="rgba(231,181,74,0)"/>
+      </linearGradient></defs>
+      <g>
+        <path style="--d:22s;--y:14px" d="M-60 250 C 320 170 560 340 880 250 S 1280 170 1520 280"/>
+        <path style="--d:26s;--y:20px" d="M-60 272 C 320 196 560 360 880 274 S 1280 196 1520 304"/>
+        <path style="--d:30s;--y:10px" d="M-60 296 C 320 222 560 382 880 300 S 1280 222 1520 330"/>
+        <path style="--d:24s;--y:24px" d="M-60 322 C 320 250 560 404 880 326 S 1280 250 1520 356"/>
+        <path style="--d:28s;--y:16px" d="M-60 600 C 300 530 600 700 900 600 S 1300 520 1520 620"/>
+        <path style="--d:32s;--y:22px" d="M-60 626 C 300 558 600 724 900 628 S 1300 548 1520 648"/>
+        <path style="--d:23s;--y:12px" d="M-60 652 C 300 586 600 748 900 654 S 1300 576 1520 676"/>
+        <path style="--d:27s;--y:26px" d="M-60 680 C 300 616 600 772 900 682 S 1300 606 1520 704"/>
+      </g>
+    </svg>
+    <div class="bolt-wrap">
+      <svg viewBox="0 0 48 72">
+        <defs><linearGradient id="bgrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#fdeec0"/><stop offset=".55" stop-color="#f3cf7e"/><stop offset="1" stop-color="#e7b54a"/>
+        </linearGradient></defs>
+        <path d="M30 2 L10 40 L22 40 L18 70 L40 30 L28 30 Z" fill="url(#bgrad)"/>
+      </svg>
+    </div>
+  </div>
+</div>
+<canvas id="fx"></canvas>
+<div class="grain"></div>
+<div class="veil"></div>
+
 <header class="site-head">
-  <nav class="nav container">
+  <nav class="nav">
     <a class="brand" href="../">
-      <span class="logo"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#e7b54a"/></svg></span>
+      <span class="logo"><svg viewBox="0 0 48 72"><path d="M30 2 L10 40 L22 40 L18 70 L40 30 L28 30 Z" fill="#f3cf7e"/></svg></span>
       <span class="word">Volt</span>
     </a>
     <span class="spacer"></span>
@@ -47,8 +83,8 @@
   </aside>
 
   <article class="doc reveal">
-    <span class="eyebrow">Legal</span>
-    <h1><span class="grad">Privacy Policy</span></h1>
+    <span class="kicker">Legal</span>
+    <h1 class="display"><span class="grad">Privacy Policy</span></h1>
     <div class="updated"><span class="dot"></span> Last updated: May 17, 2026</div>
 
     <p class="intro">This Privacy Policy explains what information the <strong>Volt</strong> Discord bot ("Volt",
@@ -171,14 +207,14 @@
 <footer class="site-foot">
   <div class="foot-in">
     <a class="brand" href="../">
-      <span class="logo"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#e7b54a"/></svg></span>
+      <span class="logo"><svg viewBox="0 0 48 72"><path d="M30 2 L10 40 L22 40 L18 70 L40 30 L28 30 Z" fill="#f3cf7e"/></svg></span>
       <span class="word">Volt</span>
     </a>
     <div class="foot-links">
       <a href="../terms-of-service/">Terms of Service</a>
       <a href="./">Privacy Policy</a>
       <a href="mailto:y810944@gmail.com">y810944@gmail.com</a>
-      <span>Discord <strong>@aexu</strong></span>
+      <span style="color:var(--muted)">Discord <strong>@aexu</strong></span>
     </div>
     <div class="foot-note">Volt is not affiliated with or endorsed by Discord Inc. · © 2026 Volt ⚡</div>
   </div>
