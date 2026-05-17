@@ -4,9 +4,12 @@ Public Terms of Service and Privacy Policy for the **Volt** Discord bot, ready t
 
 ```
 volt-legal/
-├─ index.html                  → landing page (links to both)
+├─ index.html                  → landing page (hero + links)
 ├─ terms-of-service/index.html → Terms of Service
 ├─ privacy-policy/index.html   → Privacy Policy
+├─ assets/style.css            → shared premium theme
+├─ assets/app.js               → progress bar, TOC scroll-spy, etc.
+├─ .nojekyll                   → serve files as-is
 └─ README.md                   → this file
 ```
 
