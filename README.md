@@ -4,30 +4,17 @@ Public Terms of Service and Privacy Policy for the **Volt** Discord bot, ready t
 
 ```
 volt-legal/
-├─ index.html                  → cinematic landing (animated hero)
+├─ index.html                  → landing page
 ├─ terms-of-service/index.html → Terms of Service
 ├─ privacy-policy/index.html   → Privacy Policy
-├─ assets/style.css            → shared cinematic dark-gold theme
-├─ assets/app.js               → particle field, banner loader, scroll-spy…
-├─ assets/banner.*             → (optional) your real bot banner — see below
+├─ assets/style.css            → shared clean dark-gold theme (no animation)
+├─ assets/app.js               → progress bar, scroll-spy, back-to-top
 ├─ .nojekyll                   → serve files as-is
 └─ README.md                   → this file
 ```
 
-## Optional: drop in your real bot banner
-
-The animated gold scene is **pure CSS/SVG/canvas** and needs no assets — but if
-you add your banner it's used automatically as the background (the effects layer
-on top of it). Just place a file in `assets/` with one of these exact names; the
-site probes for them in order and uses the first it finds:
-
-- Video: `assets/banner.mp4` (or `assets/banner.webm`) — best impact. Keep it
-  short, looping, **muted-friendly**, ≤ ~1080p, ≤ ~6 MB so it loads fast.
-- Image: `assets/banner.webp` (or `assets/banner.jpg` / `.png`) — export the
-  6336×2688 original down to **~2400 px wide** (WebP/JPG) so the page stays light.
-
-Nothing to wire up — add the file, commit, push, done. Remove it and the
-CSS scene comes back. (Reduced-motion visitors always get the static scene.)
+Clean static design — no background media, no animated scene, nothing to
+configure. Just edit the text and host it.
 
 ## One-time setup (≈3 minutes)
 
